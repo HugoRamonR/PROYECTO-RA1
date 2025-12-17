@@ -1,0 +1,31 @@
+# Requirements added for Sallexa
+spacy>=3.0
+es-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.5.0/es_core_news_sm-3.5.0-py3-none-any.whl
+scikit-learn>=1.0
+joblib
+fastapi
+uvicorn
+gradio
+nltk
+# ============================================
+# REQUIREMENTS - Proyecto Arquitectura ETL
+# ============================================
+
+# Core Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# PySpark
+pyspark>=3.5.0
+
+# Jupyter
+jupyter>=1.0.0
+jupyterlab>=4.0.0
+notebook>=7.0.0
+nbconvert>=7.0.0
+
+# Database
+# SQLite viene incluido en Python por defecto
+
+# Utilidades
+python-dateutil>=2.8.0

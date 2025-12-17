@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  etl-arquitectura:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: proyecto_arquitectura_etl
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./data:/app/data
+      - ./notebooks:/app/notebooks
+      - ./warehouse:/app/warehouse
+      - ./docs:/app/docs
+    environment:
+      - PYSPARK_PYTHON=python3
+      - PYSPARK_DRIVER_PYTHON=python3
+    working_dir: /app

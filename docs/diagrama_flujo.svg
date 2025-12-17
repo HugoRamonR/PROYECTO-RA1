@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" width="900" height="700">
+  <defs>
+    <style>
+      .title { font: bold 24px Arial; fill: #2c3e50; }
+      .subtitle { font: bold 16px Arial; fill: #34495e; }
+      .box-text { font: 12px Arial; fill: #fff; }
+      .box-text-dark { font: 12px Arial; fill: #2c3e50; }
+      .small-text { font: 10px Arial; fill: #7f8c8d; }
+      .arrow { stroke: #3498db; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .arrow-pandas { stroke: #e74c3c; stroke-width: 2; fill: none; marker-end: url(#arrowhead-pandas); }
+      .arrow-spark { stroke: #f39c12; stroke-width: 2; fill: none; marker-end: url(#arrowhead-spark); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3498db"/>
+    </marker>
+    <marker id="arrowhead-pandas" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c"/>
+    </marker>
+    <marker id="arrowhead-spark" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f39c12"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="700" fill="#ecf0f1"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" class="title" text-anchor="middle">Proyecto RA1: Flujo ETL de Proyectos de Arquitectura</text>
+  
+  <!-- Dataset Original -->
+  <rect x="350" y="70" width="200" height="60" rx="10" fill="#3498db"/>
+  <text x="450" y="95" class="box-text" text-anchor="middle">DATASET ORIGINAL</text>
+  <text x="450" y="115" class="box-text" text-anchor="middle">proyectos_arquitectura.csv</text>
+  <text x="450" y="140" class="small-text" text-anchor="middle">(10,000 registros)</text>
+
+  <!-- Arrows from dataset -->
+  <path d="M 400 130 L 250 180" class="arrow-pandas"/>
+  <path d="M 500 130 L 650 180" class="arrow-spark"/>
+
+  <!-- FLUJO PANDAS -->
+  <rect x="100" y="180" width="300" height="320" rx="10" fill="#fadbd8" stroke="#e74c3c" stroke-width="2"/>
+  <text x="250" y="205" class="subtitle" text-anchor="middle" fill="#c0392b">FLUJO PANDAS</text>
+  <text x="250" y="225" class="small-text" text-anchor="middle">(01_pandas.ipynb)</text>
+  
+  <!-- Pandas Steps -->
+  <rect x="130" y="240" width="240" height="35" rx="5" fill="#e74c3c"/>
+  <text x="250" y="262" class="box-text" text-anchor="middle">1. Exploración y Limpieza</text>
+  
+  <rect x="130" y="285" width="240" height="35" rx="5" fill="#e74c3c"/>
+  <text x="250" y="307" class="box-text" text-anchor="middle">2. Transformaciones</text>
+  
+  <rect x="130" y="330" width="240" height="35" rx="5" fill="#e74c3c"/>
+  <text x="250" y="352" class="box-text" text-anchor="middle">3. Proceso ETL</text>
+  
+  <rect x="130" y="375" width="240" height="35" rx="5" fill="#e74c3c"/>
+  <text x="250" y="397" class="box-text" text-anchor="middle">4. Modelo Dimensional</text>
+  
+  <rect x="130" y="420" width="240" height="35" rx="5" fill="#e74c3c"/>
+  <text x="250" y="442" class="box-text" text-anchor="middle">5. Generar DDL (.sql)</text>
+
+  <rect x="130" y="465" width="240" height="25" rx="5" fill="#c0392b"/>
+  <text x="250" y="482" class="box-text" text-anchor="middle">6. Carga SQLite</text>
+
+  <!-- FLUJO PYSPARK -->
+  <rect x="500" y="180" width="300" height="320" rx="10" fill="#fef9e7" stroke="#f39c12" stroke-width="2"/>
+  <text x="650" y="205" class="subtitle" text-anchor="middle" fill="#d68910">FLUJO PYSPARK</text>
+  <text x="650" y="225" class="small-text" text-anchor="middle">(02_pyspark.ipynb)</text>
+  
+  <!-- PySpark Steps -->
+  <rect x="530" y="240" width="240" height="35" rx="5" fill="#f39c12"/>
+  <text x="650" y="262" class="box-text" text-anchor="middle">1. Carga con SparkSession</text>
+  
+  <rect x="530" y="285" width="240" height="35" rx="5" fill="#f39c12"/>
+  <text x="650" y="307" class="box-text" text-anchor="middle">2. Transformaciones (8+)</text>
+  
+  <rect x="530" y="330" width="240" height="35" rx="5" fill="#f39c12"/>
+  <text x="650" y="352" class="box-text" text-anchor="middle">3. Proceso ETL</text>
+  
+  <rect x="530" y="375" width="240" height="35" rx="5" fill="#f39c12"/>
+  <text x="650" y="397" class="box-text" text-anchor="middle">4. Modelo Dimensional</text>
+  
+  <rect x="530" y="420" width="240" height="35" rx="5" fill="#f39c12"/>
+  <text x="650" y="442" class="box-text" text-anchor="middle">5. Generar DDL (.sql)</text>
+
+  <rect x="530" y="465" width="240" height="25" rx="5" fill="#d68910"/>
+  <text x="650" y="482" class="box-text" text-anchor="middle">6. Carga SQLite</text>
+
+  <!-- Arrows to databases -->
+  <path d="M 250 500 L 250 530" class="arrow-pandas"/>
+  <path d="M 650 500 L 650 530" class="arrow-spark"/>
+
+  <!-- Database Pandas -->
+  <rect x="100" y="530" width="300" height="100" rx="10" fill="#2ecc71"/>
+  <text x="250" y="555" class="box-text" text-anchor="middle">warehouse_pandas.db</text>
+  <text x="250" y="575" class="box-text" text-anchor="middle">+ modelo_datawarehouse_pandas.sql</text>
+  <text x="130" y="600" class="small-text">• dim_colaborador (10)</text>
+  <text x="130" y="612" class="small-text">• dim_ciudad (4)</text>
+  <text x="130" y="624" class="small-text">• dim_tipo_proyecto (5)</text>
+  <text x="260" y="600" class="small-text">• dim_estado (4)</text>
+  <text x="260" y="612" class="small-text">• dim_fase (4)</text>
+  <text x="260" y="624" class="small-text">• dim_fecha (901)</text>
+
+  <!-- Database PySpark -->
+  <rect x="500" y="530" width="300" height="100" rx="10" fill="#2ecc71"/>
+  <text x="650" y="555" class="box-text" text-anchor="middle">warehouse_pyspark.db</text>
+  <text x="650" y="575" class="box-text" text-anchor="middle">+ modelo_datawarehouse_pyspark.sql</text>
+  <text x="530" y="600" class="small-text">• dim_colaborador (20)</text>
+  <text x="530" y="612" class="small-text">• dim_ciudad (4)</text>
+  <text x="530" y="624" class="small-text">• dim_tipo_proyecto (5)</text>
+  <text x="660" y="600" class="small-text">• dim_estado (4)</text>
+  <text x="660" y="612" class="small-text">• dim_fase (4)</text>
+  <text x="660" y="624" class="small-text">• dim_tamano (4)</text>
+
+  <!-- Fact table indicator -->
+  <rect x="350" y="640" width="200" height="40" rx="5" fill="#9b59b6"/>
+  <text x="450" y="660" class="box-text" text-anchor="middle">fact_proyectos</text>
+  <text x="450" y="675" class="box-text" text-anchor="middle">(10,000 registros)</text>
+
+  <!-- Arrows to fact -->
+  <path d="M 250 630 L 350 660" class="arrow"/>
+  <path d="M 650 630 L 550 660" class="arrow"/>
+
+  <!-- Legend -->
+  <rect x="20" y="650" width="120" height="40" rx="5" fill="#fff" stroke="#bdc3c7"/>
+  <text x="30" y="668" class="small-text">Esquema Estrella</text>
+  <text x="30" y="682" class="small-text">(Star Schema)</text>
+</svg>
