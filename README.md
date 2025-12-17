@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Proyecto RA1: Análisis de Proyectos de Arquitectura
 
 ## Descripción del Proyecto
